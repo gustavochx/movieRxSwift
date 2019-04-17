@@ -14,10 +14,11 @@ class MoviesListViewController: UIViewController {
 
     @IBOutlet weak var moviesTableView: UITableView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
 
     let disposeBag = DisposeBag()
     var movieListViewModel: MovieListViewModel!
-    var activityIndicatorView: UIActivityIndicatorView = UIActivityIndicatorView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,16 +36,13 @@ class MoviesListViewController: UIViewController {
             self.moviesTableView.reloadData()
         }).disposed(by: disposeBag)
 
-        movieListViewModel
-            .isFetching
-            .drive(activityIndicatorView.rx.isAnimating)
+        movieListViewModel.isFetching.drive(activityIndicatorView.rx.isAnimating)
             .disposed(by: disposeBag)
-        movieListViewModel
-            .error
-            .drive(onNext: {[unowned self] (error) in
-                //self.infoLabel.isHidden = !self.movieListViewViewModel.hasError
-                //self.infoLabel.text = error
-            }).disposed(by: disposeBag)
+
+        movieListViewModel.error.drive(onNext: {[unowned self] (error) in
+            self.infoLabel.isHidden = !self.movieListViewModel.hasError
+            self.infoLabel.text = error
+        }).disposed(by: disposeBag)
 
         setupTableView()
     }
