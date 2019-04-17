@@ -9,7 +9,7 @@
 import UIKit
 
 extension UISegmentedControl {
-    /*
+
     var endpoint: Endpoint {
         switch self.selectedSegmentIndex {
         case 0: return .nowPlaying
@@ -18,6 +18,6 @@ extension UISegmentedControl {
         case 3: return .topRated
         default: fatalError()
         }
-    }*/
+    }
 
 }

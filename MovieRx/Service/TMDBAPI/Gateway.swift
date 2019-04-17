@@ -8,9 +8,9 @@
 
 import UIKit
 
-public class MovieStore: MovieService {
+public class Gateway: MovieService {
 
-    public static let shared = MovieStore()
+    public static let shared = Gateway()
     private init() {}
     private let apiKey = "5e42828d858a632e5960db476c6b5d4f"
     private let baseAPIURL = "https://api.themoviedb.org/3"

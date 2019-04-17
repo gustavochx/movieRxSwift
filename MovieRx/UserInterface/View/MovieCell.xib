@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="153" id="hKM-sT-e5d" customClass="MovieCell" customModule="MovieInfo" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="153" id="hKM-sT-e5d" customClass="MovieCell" customModule="MovieRx" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="153"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hKM-sT-e5d" id="rNh-eG-Z88">
@@ -75,11 +75,7 @@
                 <outlet property="movieImgView" destination="0lj-2Q-q0p" id="ccB-Se-nDh"/>
                 <outlet property="movieNameLabel" destination="bEm-4x-hTK" id="lNv-EL-OIT"/>
                 <outlet property="movieReleaseDateLabel" destination="bVp-7G-PWD" id="uLJ-sx-ict"/>
-                <outlet property="overviewLabel" destination="Vt5-bO-qAX" id="OqB-VE-ed9"/>
-                <outlet property="posterImageView" destination="0lj-2Q-q0p" id="hSi-wk-xgY"/>
                 <outlet property="ratingLabel" destination="blh-eh-ljK" id="8Pk-gt-OTN"/>
-                <outlet property="releaseDateLabel" destination="bVp-7G-PWD" id="cZN-yp-OOY"/>
-                <outlet property="titleLabel" destination="bEm-4x-hTK" id="ofv-U3-xie"/>
             </connections>
             <point key="canvasLocation" x="155" y="149"/>
         </tableViewCell>

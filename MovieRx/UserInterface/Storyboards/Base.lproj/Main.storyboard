@@ -67,6 +67,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="moviesTableView" destination="RvW-mN-RWY" id="lOB-tL-qbT"/>
+                        <outlet property="segmentedControl" destination="cfj-Nw-J93" id="QVD-sk-Oev"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CKj-Ta-nUz" userLabel="First Responder" sceneMemberID="firstResponder"/>
